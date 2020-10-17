@@ -14,3 +14,19 @@ doc_ref.set({
     'lname': 'Forogh',
     'age': 24
 })
+
+
+
+
+
+
+
+
+
+
+emp_ref = db.collection('employee')
+docs = emp_ref.stream()
+
+for doc in docs:
+    print('{} => {} '.format(doc.id, doc.to_dict()))
+
